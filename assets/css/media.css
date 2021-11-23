@@ -1,0 +1,193 @@
+/* Responsive StyleSheet */
+/* This style sheet is used for make  responsive our web app*/
+/* We responsive somethings of our web app using this media queries */
+
+/* Responsive Top header*/
+/* for xs devices*/
+@media screen and (max-width:300px){
+    .slider-caption h3{
+        font-size: 0.8em !important;
+    }
+    .slider-caption h1{
+        font-size: 1.5em !important;
+    }
+    .event-heading h1,
+    .offer-heading h1,
+    .testimonials-heading h1{
+        font-size: 1em !important;
+    }
+    .test-text{
+        font-size: 0.8em !important;
+    }
+    .test-slider-btn{
+        top: 20%;
+    }
+}
+
+/* for small devices*/
+@media screen and (max-width:576px){
+    .offer-container,
+    .event-container{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .offer-items,
+    .event-items{
+        margin:0px; !important;
+    }
+
+
+}
+/* for medium  devices smart-phone tablet */
+@media screen and (max-width: 768px) {
+    .header{
+        display: none;
+    }
+    .room-item{
+        padding-bottom: 60px;
+        width: 100% !important;
+    }
+    .offer-container,
+    .event-container{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .offer-items,
+    .event-items{
+        margin:0px; !important;
+    }
+    .slider-caption{
+        align-items:  start !important;
+    }
+    .slider-caption h3{
+        font-size: 1.2em;
+    }
+    .slider-caption h1{
+        font-size: 2em;
+    }
+
+    .event-heading h1,
+    .offer-heading h1,
+    .testimonials-heading h1{
+        font-size: 1.5em !important;
+    }
+
+    .about-section .row:last-child .about-img{
+        margin-bottom: 0px;
+    }
+    .about-img,
+    .about-content{
+        margin-bottom: 25px;
+    }
+
+}
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .slider-caption{
+        align-items:  center !important;
+    }
+    .slider-caption h3{
+        font-size: 1.5em;
+    }
+    .slider-caption h1{
+        font-size: 2.5em;
+    }
+
+    .event-heading,
+    .offer-heading,
+    .testimonials-heading{
+        font-size: 1em;
+    }
+}
+
+/* for large device*/
+@media screen and (max-width: 992px){
+    .room-items{
+        margin-top: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .room-item{
+        padding-bottom: 60px;
+        width: 500px;
+    }
+
+
+}
+
+
+/* for large devices devices desktop   */
+@media screen and (max-width: 1199.98px) {
+    /* Add linear gradient apply alpha color on top of images so text will appear clearly*/
+    .slider-item:nth-child(1){ /* for slide-item 1 */
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../images/home-1-1025x664.jpg");
+
+    }
+    .slider-item:nth-child(2){/* for slide-item 2 */
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../images/children_PNG17990.png");
+
+    }
+    .slider-item:nth-child(3){/* for slide-item 3 */
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../images/home-3-1025x664.jpg");
+
+    }
+    .slider-item:nth-child(4){/* for slide-item 4 */
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../images/home-2-1025x664.jpg");
+
+
+    }
+    /*set background-size cover for cover complete container and position on center*/
+    .slider-item:nth-child(1),
+    .slider-item:nth-child(2),
+    .slider-item:nth-child(3),
+    .slider-item:nth-child(4){
+        background-position: center;
+        background-size: cover;
+    }
+
+}
+
+
+
+/* for extra large device*/
+@media screen and (min-width: 1200px){
+    /* Add linear gradient apply alpha color on top of images so text will appear clearly*/
+    .slider-item:nth-child(1){ /* for slide-item 1 */
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../images/home-2-1025x664.jpg");
+
+    }
+    .slider-item:nth-child(2){/* for slide-item 2 */
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../images/children_PNG17990.png");
+
+    }
+    .slider-item:nth-child(3){/* for slide-item 3 */
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../images/home-1-1025x664.jpg");
+
+    }
+    .slider-item:nth-child(4){/* for slide-item 4 */
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../images/home-3-1025x664.jpg");
+
+
+    }
+    /*set background-size cover for cover complete container and position on center*/
+    .slider-item:nth-child(1),
+    .slider-item:nth-child(2),
+    .slider-item:nth-child(3),
+    .slider-item:nth-child(4){
+        background-position: center;
+        background-size: cover;
+    }
+    .slider-caption{
+        align-items:  center !important;
+    }
+    .slider-caption h3{
+        font-size: 2em;
+    }
+    .slider-caption h1{
+        font-size: 3.5em;
+    }
+
+
+
+}

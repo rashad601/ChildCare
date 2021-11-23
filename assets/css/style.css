@@ -1,0 +1,653 @@
+/* Custom Css For Design Our App Components */
+/* Import Google Font "ROBOTO " from google font family */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+/* Create & initialize color variables */
+/* makes it much easier to change the color values */
+/* you can use this variable with var() func */
+:root{
+    --body-background : #f8f8f8;
+    --header-background: #41b3a3;
+    --white: #fff;
+    --black:#000;
+    --blue : #005cbf;
+    --red : #ff0004;
+    --orange:#fd7e14;
+    --sky:#17a2b8;
+    --aqua:#41b3a3;
+    --tomato:#FF6347;
+    --tan:#D7B98C;
+    --yellow:#FFFF00;
+    --warning: #ffc107;
+    --darkgray:#999999;
+    --smoke:#E8E8E8;
+
+}
+
+/* Body */
+body{
+    background-color: var(--body-background);
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif !important;
+}
+/* Common Section Styling */
+section  h1, h2, h3, h4, a, span{
+    font-family: 'Dancing Script', cursive;
+}
+section a{
+    font-size: 1.2em;
+}
+span.error{
+    font-family: 'Roboto', sans-serif !important;
+}
+
+/* Header & footer */
+.header,
+.footer{
+    background-color: var(--header-background);
+    color: var(--white);
+}
+
+/* Footer */
+footer p{
+    text-align: justify;
+    color: var(--white);
+}
+/* Design header content info */
+.info-item,
+.social-links{
+    margin: 0px 10px;
+}
+.welcome-user{
+    font-size: 1.5em;
+}
+.info-item:first-child span{
+    font-size: 0.8em;
+}
+.info-item span,
+.info-item i{
+    font-size: 0.9rem;
+    margin-left: 5px ;
+}
+.info-item i{
+    font-size: 1rem;
+}
+
+.top-right .login-btn a,
+.logout-btn a{
+    display: inline-block;
+    border:1px solid var(--white);
+    border-radius: 25px;
+    padding:0px 15px;
+    text-decoration: none;
+    font-weight: 800;
+    margin-top: 2px;
+    font-family: "Times New Roman";
+    transition: all .3s linear;
+}
+.logout-btn a{
+    margin-top:8px;
+}
+.top-right .login-btn a:hover,
+.logout-btn a:hover{
+    border-color: var(--red);
+    color: var(--white);
+    background-color: var(--red);
+}
+
+/*  Design header  socials link*/
+.social-links  a,
+.staff-btn a{
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: var(--white);
+    margin: 0px 5px;
+    text-decoration: none;
+    border-radius: 100%;
+    font-size: 0.9rem;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: .3s linear;
+}
+.staff-btn a{
+    display: inline-block;
+}
+/* set background on social links  hover */
+.social-links  a:first-child:hover{
+    background-color: #005cbf;
+}
+.social-links  a:nth-child(2):hover{
+    background-color: var(--sky);
+}
+.social-links  a:nth-child(3):hover{
+    background-color: var(--orange);
+}
+.social-links  a:last-child:hover{
+    background-color: var(--red);
+}
+
+
+/*  Design header navbar */
+.navbar-nav .nav-item{
+    margin-left: 25px;
+}
+
+.navbar-nav .nav-item .nav-link{
+    position: relative;
+    overflow: hidden;
+}
+.navbar-nav .nav-item .active{
+    color: var(--red) !important;
+}
+/* set outline top of nav item */
+.navbar-nav .nav-item .nav-link::before{
+    content: '';
+    display: block;
+    width:100%;
+    height: 2px;
+    background-color: var(--orange) !important;
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    transition: .3s linear;
+}
+/* set outline bottom of nav item */
+.navbar-nav .nav-item .nav-link::after{
+    content: '';
+    display: block;
+    width:100%;
+    height: 2px;
+    background-color: var(--orange) !important;
+    position: absolute;
+    top: 90%;
+    transition: .3s linear;
+    left: -100%;
+    display: block !important;
+    z-index: 100;
+
+}
+/* set link color red  on hover */
+.navbar-nav .nav-item .nav-link:hover{
+    color: var(--red);
+}
+/* display outline's on hover */
+.navbar-nav .nav-item .nav-link:hover::after{
+    left: 0%;
+}
+.navbar-nav .nav-item .nav-link:hover::before{
+    left: 0%;
+}
+
+/* Design for dropdown list */
+
+.navbar-nav .dropdown-toggle::after{
+    border:0px !important;
+    margin-left: 0px;
+
+}
+/* Design for toggle btn*/
+.navbar .navbar-toggler{
+    box-shadow: none;
+    border:none;
+    outline: none;
+
+}
+.navbar-toggler-icon{
+    display:none;
+}
+
+
+/* set dropdown menu background color*/
+.dropdown-menu{
+    background-color: var( --aqua);
+}
+/* set dropdown-item color*/
+.dropdown-item{
+    color:var(--white);
+}
+/* add background color on dropdown-item while hover*/
+.dropdown-item:hover{
+    background-color: var(--red);
+    color: var(--white);
+}
+
+/* display dropdown menu while hover on dropdown list item*/
+.dropdown:hover > .dropdown-menu{
+    display: block;
+}
+
+
+/* Banner Section */
+.banner{
+    margin:0px;
+    padding: 0px;
+    height: 80vh;
+}
+
+.slider{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+/* Design for slider-items*/
+.slider-item{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    transition: all .5s linear;
+}
+
+.slider-item:nth-child(3){ /* for slide-item 1 */
+    background-color: var( --tomato);
+    background-image: url("../images/home-1-1025x664.jpg");
+    background-repeat: no-repeat;
+    background-position:right;
+}
+.slider-item:nth-child(2){/* for slide-item 2 */
+    background-color:  var( --aqua);
+    background-image: url("../images/children_PNG17990.png");
+    background-repeat: no-repeat;
+    background-position:right;
+}
+.slider-item:nth-child(4){/* for slide-item 3 */
+    background-color:var( --orange);
+    background-image: url("../images/home-3-1025x664.jpg");
+    background-repeat: no-repeat;
+    background-position:right;
+}
+.slider-item:nth-child(1){/* for slide-item 4 */
+    background-color: var( --sky);
+    background-image: url("../images/home-2-1025x664.jpg");
+    background-repeat: no-repeat;
+    background-position:right;
+}
+/* Design Slider caption, headings, buttons*/
+.slider-caption{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0px 50px;
+
+}
+.slider-caption h3{
+    color:var(--yellow);
+    font-weight: bold;
+}
+.slider-caption h1{
+    color:var(--white);
+    font-weight: bold;
+}
+.slider-caption a{
+    display: inline-table;
+    padding: 10px 25px;
+    border:2px solid var(--warning);
+    border-radius: 25px;
+    color:var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    width: 150px;
+    text-align: center;
+    margin-top: 10px;
+}
+.slider-caption a:hover{
+    background-color: var(--warning);
+    color: var(--white);
+}
+
+/* Design Slider btn*/
+.slider-btn,
+.test-slider-btn{
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+.test-slider-btn{
+    top: 30%;
+}
+.slider-btn button,
+.test-slider-btn button{
+    border:none;
+    background: none;
+    box-shadow: none !important;
+    color: var(--white);
+    font-weight: bold;
+    margin: 0px 15px;
+}
+
+
+/* Room-section*/
+.room-section,
+.offer-sec{
+    width: 100%;
+    position: relative;
+}
+.room-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+.room-item{
+    padding: 40px 35px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: -20px 0px;
+    z-index: 100;
+}
+/* Set Spedifics backgrounds of every room items*/
+.room-item:nth-child(1){
+    background-color: var(--tomato);
+}
+.room-item:nth-child(2){
+    background-color: var(--warning);
+}
+.room-item:nth-child(3){
+    background-color: var(--orange);
+}
+.room-item:nth-child(4){
+    background-color: var(--sky);
+}
+
+.room-item h1, p, a{
+    color: var(--white);
+}
+
+.room-item a{
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+/*
+    Select Background color for every room anchor tag
+*/
+.room-item:nth-child(1) a{
+    background-color: var(--warning);
+}
+.room-item:nth-child(2) a{
+    background-color: var(--tomato);
+}
+.room-item:nth-child(3) a{
+    background-color: var(--sky);
+}
+.room-item:nth-child(4) a{
+    background-color: var(--orange);
+}
+.room-item:hover{
+    margin-top: -30px;
+}
+.room-item a{
+    color: var(--white);
+}
+
+/* Event Section , offer and activity items*/
+
+.event-item,
+.offer-item,
+.activity-item{
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+    border-bottom: 4px solid var(--tomato);
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    background-color: var(--white);
+}
+
+.event-image,
+.offer-image,
+.activity-image{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.event-image img,
+.offer-image img,
+.activity-image img{
+    object-position: center;
+    object-fit: cover;
+    width: 100% !important;
+    height: 100%;
+}
+
+.event-title,
+.offer-title,
+.activity-title{
+    color:var(--tomato);
+    padding-bottom: 0px!important;
+}
+.event-title span,
+.offer-title span{
+    color: var(--orange);
+}
+.event-des p,
+.offer-des p,
+.activity-des p,
+.program-des p,
+.class-time span,
+.activity-time span{
+    color:var(--darkgray);
+    word-break:break-word;
+}
+.event-btn a,
+.offer-btn a,
+.program-btn a,
+.activity-btn a{
+    padding:10px 25px;
+    background-color: var(--tomato);
+    color:var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+}
+.event-item:hover .event-btn a,
+.offer-item:hover .offer-btn a,
+.program-item:hover .program-btn a,
+.activity-item:hover .activity-btn a{
+    background-color: var(--orange);
+}
+
+/* Special Offer Section */
+.offer-sec{
+    /*background-color: var(--sky);*/
+    background-image:url("../images/activites-banner-2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+/* Activities Section */
+.activity-sec{
+    background-image: url("../images/activites-banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+/*Testimonials */
+
+.test-img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    object-fit: cover;
+    border:4px solid var(--tomato);
+}
+.testimonial-item{
+    position: relative;
+
+}
+
+
+
+
+
+/* About Section */
+
+.about-image{
+    position: relative;
+    width:100%;
+    min-height: 664px;
+    overflow: hidden;
+}
+.about-image img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -0%;
+}
+.about-content,
+.about-info,
+.about-info-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.about-info{
+    width:70%;
+}
+.about-info-head,
+.about-info-des{
+    width: 100%;
+}
+.about-info-head h1{
+    font-weight: bold;
+
+}
+
+.divider{
+    width: 100px;
+    height: 2px;
+    background-color: var(--black);
+
+}
+.about-section .row:nth-child(even){
+    margin-bottom: 10px !important;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1) !important;
+}
+
+/* staff section , Program Section*/
+.staff-item,
+.program-item{
+    overflow: hidden;
+    background-color:var(--smoke);
+    border-radius: 10px;
+    cursor:pointer;
+    border-bottom: 4px solid var(--tomato);
+    transition: background-color  .5s linear;
+}
+.staff-item:hover,
+.program-item:hover{
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+    border-bottom:4px solid  var(--sky);
+    background-color: var(--white);
+}
+.staff-item:hover .staff-image img
+.program-item:hover .program-image img{
+    transform: scale(1.1) !important;
+}
+.staff-image,
+.program-image{
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+    overflow: hidden;
+}
+.program-image{
+     min-height: 250px;
+}
+.staff-image img,
+.program-image img{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: all .5s linear;
+}
+
+
+.staff-btn  a:nth-child(1){
+    background-color: #005cbf;
+}
+.staff-btn  a:nth-child(2){
+    background-color: var(--sky);
+}
+.staff-btn  a:nth-child(3){
+    background-color: var(--orange);
+}
+.staff-btn a:nth-child(4){
+    background-color: var(--red);
+}
+
+/* Login Section*/
+
+.login-form{
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+/* DashBoard Section */
+.dashboard-items  a{
+    width: 100%;
+    display: block;
+    text-decoration: none !important;
+    border-radius: 10px;
+    height: 200px;
+    text-align: center;
+
+}
+.dashboard-item span{
+    font-size: 2em;
+}
+
+/* Table */
+table tr th,
+table tr td a{
+    font-family: "Times New Roman";
+}
+table tr td{
+    color:var(--black);
+    font-family: "Times New Roman";
+}
+.content a{
+    display: block;
+    padding: 8px 25px;
+    margin-bottom: 0px !important;
+    background-color: var(--red);
+    color:var(--white);
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+/*
+    Set responsive height of all sections
+*/
+.public-section,
+.admin-section{
+    min-height: 100vh;
+}
+
+
+
